@@ -58,11 +58,11 @@ def test_ui_home():
     assert response.status_code == 200
     assert "text/html" in response.headers["content-type"]
     assert "BEST Health Check" in response.text
-    assert "/static/nextgenlogoelcloud-logo.jpg" in response.text
+    assert "/static/nextgenlogo.jpg" in response.text
 
 
 def test_brand_assets_served():
-    for path in ("/static/nextgenlogo.jpg", "/static/nextgenmark.jpg", "/static/nextgenlogoelcloud-logo.jpg"):
+    for path in ("/static/nextgenlogo.jpg", "/static/nextgenmark.jpg", "/static/nextgenlogo.jpg"):
         response = client.get(path)
         assert response.status_code == 200, path
         assert response.headers["content-type"].startswith("image/"), path
