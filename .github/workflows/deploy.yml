@@ -11,8 +11,8 @@ permissions:
   security-events: write
 
 env:
-  AWS_REGION: us-east-2
-  PROJECT_NAME: bmi-health-check
+  AWS_REGION: us-east-1
+  PROJECT_NAME: best-health-check
 
 jobs:
   test:
@@ -203,6 +203,6 @@ jobs:
           assert bmi.get("category") == "normal", bmi
           assert bmi.get("health_advice"), bmi
           assert bmi.get("exercises"), bmi
-          assert "BMI Health Check" in home
+          assert "BEST Health Check" in home
           print("Smoke tests passed")
           PY

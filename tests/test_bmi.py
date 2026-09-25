@@ -57,7 +57,7 @@ def test_ui_home():
     response = client.get("/")
     assert response.status_code == 200
     assert "text/html" in response.headers["content-type"]
-    assert "BMI Health Check" in response.text
+    assert "BEST Health Check" in response.text
     assert "/static/excelcloud-logo.jpg" in response.text
 
 

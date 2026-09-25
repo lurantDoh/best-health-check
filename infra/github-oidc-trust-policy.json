@@ -1,23 +1,25 @@
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "arn:aws:iam::319029038820:oidc-provider/token.actions.githubusercontent.com"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
-        },
-        "StringLike": {
-          "token.actions.githubusercontent.com:sub": [
-            "repo:excelcloudOps/bmi-health-check:*",
-            "repo:excelcloudOps@*/bmi-health-check@*:*"
-          ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::027024089660:oidc-provider/token.actions.githubusercontent.com"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+                },
+                "StringLike": {
+                    "token.actions.githubusercontent.com:sub": [
+                        "repo:lurantDoh/nexgen-bmi-healthcheck:*",
+                        "repo:lurantDoh@*/nexgen-bmi-healthcheck@*:*",
+                        "repo:lurantDoh/best-health-check:*",
+                        "repo:lurantDoh@*/best-health-check@*:*"
+                    ]
+                }
+            }
         }
-      }
-    }
-  ]
+    ]
 }

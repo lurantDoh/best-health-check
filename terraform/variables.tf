@@ -1,13 +1,13 @@
 variable "aws_region" {
   type        = string
   description = "AWS region for all resources"
-  default     = "us-east-2"
+  default     = "us-east-1"
 }
 
 variable "project_name" {
   type        = string
   description = "Name prefix for resources"
-  default     = "bmi-health-check"
+  default     = "best-health-check"
 }
 
 variable "image_tag" {
